@@ -1,4 +1,4 @@
 # Practice-JS
 small projects html/css + javasctipt
 
-[See projects](index.html)
+[See projects](https://mzkex.github.io/Practice-JS/)
