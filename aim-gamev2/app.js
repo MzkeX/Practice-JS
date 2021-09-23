@@ -137,7 +137,7 @@ function finishGame() {
     board.innerHTML = `
     <h1>Cчет: <span class="primary">${score}</span></h1>
     <h3>Промахи: <span class="primary">${missCount}</span></h3>
-    <h3>Меткость: <span class="primary">${ Math.ceil(accuracy)}% </span></h3>
+    <h3>Меткость: <span class="primary">${ Math.trunc(accuracy)}% </span></h3>
     <h4>"${difficult}", ${timeValues} сек.</h4>
     `;
     timeEl.parentNode.classList.add('hide');
