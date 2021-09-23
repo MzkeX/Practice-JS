@@ -1,31 +1,34 @@
-const board = document.querySelector('#board')
-const colors = ['#4C166C', '#6D359A', '#9253D6', '#FBDF62', '#FFA302', '#C10C15', '#EC4042', '#A167F9']
-const SQUARES_NUMBER = 520
+const board = document.querySelector('#board');
+const colors = ['#fbf2eb', '#2e5e84', '#bbd70b', '#fa9705', '#d7beac'];
+const SQUARES_NUMBER = 480;
 
 for (let i = 0; i < SQUARES_NUMBER; i++) {
-    const square = document.createElement('div')
-    square.classList.add('square')
+    const square = document.createElement('div');
+    square.classList.add('square');
 
-    square.addEventListener('mouseover', setColor)
-    square.addEventListener('mouseleave', removeColor)
+    square.addEventListener('mouseover', () => {
+        setColor(square)
+    });
 
+    square.addEventListener('mouseleave', () => {
+        removeColor(square)
+    });
 
-    board.append(square)
+    board.append(square);
 }
 
-function setColor(event) {
-    const element = event.target
-    const color = getRandomColor()
-    element.style.backgroundColor = color
-    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
+function setColor(element) {
+    const color = getRandomColor();
+    element.style.backgroundColor = color;
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 }
 
-function removeColor(event) {
-    const element = event.target
-    element.style.backgroundColor = '#1d1d1d'
-    element.style.boxShadow = '0 0 2px #000'
+function removeColor(element) {
+    element.style.backgroundColor = 'transparent';
+    element.style.boxShadow = '';
 }
 
 function getRandomColor() {
-    return colors[Math.floor(Math.random() * colors.length)]
+    const index = Math.floor(Math.random() * colors.length);
+    return colors[index]
 }

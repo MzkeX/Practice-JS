@@ -25,7 +25,8 @@ body {
     box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
     border-radius: 20px;
     padding: 0.8rem 1rem;
-    color: #fff;
+    color: rgb(30, 0, 0);
+    font-weight: bold;
 }
 
 .item {
@@ -48,6 +49,8 @@ body {
 .placeholder {
     width: 150px;
     height: 66px;
+    background: rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
 }
 
 .start {
@@ -63,14 +66,11 @@ body {
 }
 
 .hold {
-    border: 2px dashed #ff85e4;
-    cursor: grabbing;
-}
-
-.hide {
-    display: none;
+    border: 5px solid #eee;
 }
 
 .hovered {
-    border-top: 2px solid #1338be;
+    border: 2px dashed rgba(196, 196, 196, 0.36);
+    transition: background 0.2s ease-in-out;
+    background: rgba(139, 139, 139, 0.36);
 }
