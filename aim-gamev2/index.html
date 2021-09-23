@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aim Training | Проект 5</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-colors">
+            <ul class="bgColorBtns-list" id="bgColorBtns-list">
+                <!-- Кнопки Генерируются из JS -->
+            </ul>
+        </div>
+        <div class="wrapper-screens">
+            <div class="screen" id="welcome">
+                <h1>Aim Training</h1>
+                <button class="start-btn" id="start-btn">Начать Игру</button>
+            </div>
+
+            <div class="screen" id="parametersTime">
+                <h1>Продолжительность игры</h1>
+                <ul class="time-list" id="time-list">
+                    <!-- Кнопки Генерируются из JS -->
+                </ul>
+            </div>
+
+            <div class="screen" id="parametersDifficult">
+                <h1>Сложнось игры</h1>
+                <ul class="difficult-list" id="difficult-list">
+                    <!-- Кнопки Генерируются из JS -->
+                </ul>
+            </div>
+
+            <div class="screen" id="gameBoard">
+                <h3>Осталось <span id="time">00:00</span></h3>
+                <div class="board" id="board"></div>
+                <button class="startAgain-btn" id="startAgain-btn">
+          Вернуться на главную
+        </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
